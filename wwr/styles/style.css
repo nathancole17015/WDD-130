@@ -10,6 +10,7 @@
 nav a{
     text-align: center;
     text-decoration: none;
+    color:#03045e;
 }
 
 
@@ -34,50 +35,65 @@ main section{
 
 #background{
     height: 725px;
+    background-color:#caf0f8 ;
 }
 body{
     background-color: cadetblue;
 }
 header{
-    background-color: cadetblue;
+    background-color: #caf0f8;
 }
 nav a:hover{
     background-color: aqua ;
+    color:pink;
 }
 .book{
-    background-color: cadetblue;
+    background-color: #caf0f8;
     text-decoration: none;
+    color:#03045e;
 }
 .join{
-    background-color: cadetblue;
+    background-color: #e76f51;
     text-decoration: none;
+    color:#03045e;
 
 }
 
 .book:hover{
     background-color: aqua;
+    color:#e76f51;
 }
 
 .join:hover{
     background-color: aqua;
+    color:antiquewhite;
+}
+.msg{
+    background-color: aquamarine;
+    
 }
 .msg h2{
-    background-color: brown;
+    background-color: #8ecae6;
+    color:palegreen;
 }
 .msg p{
-    background-color: blueviolet;
+    background-color: #8ecae6;
+    color:firebrick;
 }
 footer{
-    background-color: cadetblue;
+    background-color: #8ecae6;
+    color:pink;
 }
 
 footer a{
-    background-color: cadetblue;
+    background-color: greenyellow;
     text-decoration: none;
+    color:blueviolet;
 
 }
 footer a:hover{
     background-color: aqua;
+    color: white;
     
 }
 .logo{
@@ -88,4 +104,10 @@ footer a:hover{
 }
 footer p a:hover{
     text-decoration: underline;
+}
+.home-title{
+    color:#03045e;
+}
+h4{
+    color:#03045e;
 }
