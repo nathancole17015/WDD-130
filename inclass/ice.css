@@ -1,6 +1,6 @@
 body{
-    background-color: pink;
-
+    background-color: #FCA6C9ff;
+    
    
 }
 
@@ -8,11 +8,11 @@ body{
     text-align: center;
     width: 570px;
     margin: auto;
- 
 }
 header{
    font-size: larger;
     color: white;
+    
 
 }
 header h1:hover {
@@ -23,9 +23,10 @@ img{
 }
 footer{
     font-size: small;
-    width: 230px;
+    width: 290px;
     margin: auto;
-    
+    margin-bottom: 40px ;
+    font-weight:bold;
     
 }
 footer p{
@@ -33,16 +34,17 @@ footer p{
 }
 #quote{
     font-size: 30px;
-    width: 240px;
+    width: 260px;
     vertical-align:middle;
     text-align: center;
     color:white;
     margin: auto;
+    
 }
 
 li{
    
     text-align:left;
-    font-weight: bold;
+    font-weight: bolder;
     margin: 10px auto;
 }
