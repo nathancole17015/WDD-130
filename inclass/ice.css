@@ -1,20 +1,48 @@
+body{
+    background-color: pink;
+
+   
+}
 
 #content{
     text-align: center;
-    max-width: 900px;
-    margin: 0, auto;
+    width: 570px;
+    margin: auto;
  
 }
 header{
    font-size: larger;
+    color: white;
 
 }
+header h1:hover {
+    color: black;
+}
 img{
-    width: 50%;
+    width: 30%;
 }
 footer{
     font-size: small;
+    width: 230px;
+    margin: auto;
+    
+    
+}
+footer p{
+    margin: 0;
 }
 #quote{
-    font-size: larger;
+    font-size: 30px;
+    width: 240px;
+    vertical-align:middle;
+    text-align: center;
+    color:white;
+    margin: auto;
+}
+
+li{
+   
+    text-align:left;
+    font-weight: bold;
+    margin: 10px auto;
 }
