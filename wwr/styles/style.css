@@ -101,7 +101,8 @@ nav a:hover{
 footer{
     background-color: darkblue;
     color:pink;
-    padding: 35px 50px;
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 
 footer a{
@@ -123,7 +124,7 @@ footer a:hover{
 }
 footer p{
     font-size:1.2em ;
-    margin-top: 200px;
+    
 }
 footer p a:hover{
     text-decoration: underline;
@@ -151,7 +152,7 @@ footer .social img{
 }
 
 .rivers-card, .camping-card, .rapids-card{
-    margin: 200px ;
+    margin: 200px 0;
 }
 .card-img{
     border: 10px solid black;
