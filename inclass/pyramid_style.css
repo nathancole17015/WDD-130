@@ -1,0 +1,19 @@
+div{
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.top{
+    width: 400px;
+    background-color:red ;
+}
+.middle{
+    width: 475px;
+    background-color:blue ;
+}
+.bottom{
+    width: 5500px;
+    background-color: green;
+    padding: 30px 0;
+}
