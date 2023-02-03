@@ -1,0 +1,19 @@
+body{
+    background-color: #737373;
+    margin:0;
+
+}
+
+#top{
+    
+    width:  100%;
+    margin-bottom: 50px; 
+}
+.circle{
+    border-radius: 50%;
+    width: 150px;
+    border: 8px solid #444444;
+    padding: 1;
+    float: left;
+    margin: auto 170px;
+}
