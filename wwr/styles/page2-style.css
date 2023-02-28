@@ -24,6 +24,9 @@ body{
 h2{
     font-family: 'Roboto';
 }
+#faq{
+    margin:5px
+}
 header{
     background-color: #caf0f8;
     font-family: 'Rowdies';
@@ -95,7 +98,7 @@ nav{
         display: block;
         padding: 15px;
     }
-  
+    
   
     #background {
         display: none;
