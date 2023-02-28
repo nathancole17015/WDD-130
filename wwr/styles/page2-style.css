@@ -21,6 +21,9 @@ body{
     font-family: 'Roboto';
 
 }
+h2{
+    font-family: 'Roboto';
+}
 header{
     background-color: #caf0f8;
     font-family: 'Rowdies';
@@ -79,3 +82,27 @@ nav{
 #banner-img{
     width: 100%;
 }
+
+@media screen and (max-width: 900px) {
+    #hero, .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+  
+  
+    #background {
+        display: none;
+    }
+    
+    footer {
+        margin-top: 25px;
+    }
+}
+            
