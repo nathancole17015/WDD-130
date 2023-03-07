@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+</head>
+<body>
+    <img src="./images/measruing-cup.png" alt="Measuring Cup">
+    <img src="./images/mesuring-stcik.png" alt="Measuring Stick">
+    <img src="./images/scale.jpg" alt="Scale">
+
+    <p>import math
+
+        def main():
+            celsius = -1
+            fahrenheit  = -1
+            choice_1 = -1
+           
+            while choice_1 != 0:
+                try:
+                    print()
+                    print('1. Converting metric to imperial')
+                    print('2. Converting imperial to metric')
+                    print('0. Quit')
+                                    
+                    choice_1 = int(input('Enter 1 or 2: '))
+                    print()
+                    choice_2 = -1
+                except ValueError as ve:
+                    print(f'{ve} Invalid number')
+                    # choice_1 = -1
+                    print()
+                    
+                    
+                    
+                while choice_2 != 0:
+                    try:
+                        if choice_1 == 1:
+                            print('1. Converting Liquid')
+                            print('2. Converting Measurements ')
+                            print('3. Converting Weight')
+                            print('4. Converting Temperature')
+                            print('0. Go back')
+                            choice_2 = int(input('Choose a conversion: '))
+                            print()
+                            
+                            if choice_2 == 1:
+                                print('1. Liters to quarts')
+                                print('2. Liters to gallons ')
+                                print('3. Milliliters to cups')
+                                print('4. Milliliters to ounces')
+                                print('0. Go back')
+                                choice_3 = int(input('Choose a conversion: '))
+                                print()
+                                while choice_3 != 0:
+                                    try:
+                                        if choice_3 == 1:
+                                            print('Liters to quarts')
+                                            print('Enter 0 to back up')
+                                            liters = float(input('Enter amount Liters: '))
+                                            quarts = liters_to_quarts(liters)
+                                            print(f'Your amount in quarts is {quarts:.2f}')
+                                            print()
+                                            if liters == 0:
+                                                break
+                                        elif choice_3 == 2:
+                                            print('Liters to gallons')
+                                            print('Enter 0 to back up')
+                                            liters = float(input('Enter amount Liters: '))
+                                            gallons = liters_to_gallons(liters)
+                                            print(f'Your amount in gallons is {gallons:.2f}')
+                                            print()
+                                            if liters == 0:
+                                                break
+                                        elif choice_3 == 3:
+                                            print('Milliliters to cups')
+                                            print('Enter 0 to back up')
+                                            milliliters = float(input('Enter amount of Milliliters: '))
+                                            cups = milliliters_to_cups(milliliters)
+                                            print(f'Your amount in cups is {cups:.2f}')
+                                            print()
+                                            if milliliters == 0:
+                                                break
+                                        elif choice_3 == 4:
+                                            print('Milliliters to ounces')
+                                            print('Enter 0 to back up')
+                                            milliliters = float(input('Enter amount Milliliters: '))
+                                            ounces = milliliters_to_ounces(milliliters)
+                                            print(f'Your amount in ounces is {ounces:.2f}')
+                                            print()
+                                            if milliliters == 0:
+                                                break
+                                        else:
+                                            print('Value out of bounds')
+                                            print()
+                                            break
+                                    except ValueError as ve:
+                                        print(f'{ve} Invalid number')
+                                        print()    
+        
+                            elif choice_2 == 2:
+                                print('1. Kilometers to miles')
+                                print('2. Kilometers to feet')
+                                print('3. Meters to feet')
+                                print('4. Centimeters to inches')
+                                print('5. Millimeters to inches')
+                                print('0. Go Back')
+                                choice_3 = int(input('Choose a conversion: '))
+                                print()
+                                while choice_3 != 0:
+                                    try:
+                                        if choice_3 == 1:
+                                            print('Kilometers to miles ')
+                                            print('Enter 0 to back up')
+                                            kilometers = float(input('Enter amount of Kilometers: '))
+                                            miles = kilometers_to_miles(kilometers)
+                                            print(f'Your amount in miles is {miles:.2f}')
+                                            print()
+                                            if kilometers == 0:
+                                                break
+                                        elif choice_3 == 2:
+                                            print('Kilometers to feet')
+                                            print('Enter 0 to back up')
+                                            kilometers = float(input('Enter amount of Kilometers: '))
+                                            feet = kilometers_to_feet(kilometers)
+                                            print(f'Your amount in feet is {feet:.2f}')
+                                            print()
+                                            if kilometers == 0:
+                                                break
+                                        elif choice_3 == 3:
+                                            print('Meters to feet')
+                                            print('Enter 0 to back up')
+                                            Meters = float(input('Enter amount of Meters: '))
+                                            feet = meters_to_feet(Meters)
+                                            print(f'Your amount in feet is {feet:.2f}')
+                                            print()
+                                            if Meters == 0:
+                                                break
+                                        
+                                        elif choice_3 == 4:
+                                            print('Centimeters to inches')
+                                            print('Enter 0 to back up')
+                                            Centimeters = float(input('Enter amount of Centimeters: '))
+                                            inches = centimeters_to_inches(Centimeters)
+                                            print(f'Your amount in inches is {inches:.2f}')
+                                            print()
+                                            if Centimeters == 0:
+                                                break
+                                        elif choice_3 == 5:
+                                            print('Millimeters to inches')
+                                            print('Enter 0 to back up')
+                                            Millimeters = float(input('Enter amount of Millimeters: '))
+                                            inches = millimeters_to_inches(Millimeters)
+                                            print(f'Your amount in inches is {inches:.2f}')
+                                            print()
+                                            if Millimeters == 0:
+                                                break
+                                        else:
+                                            print('Value out of bounds')
+                                            print()
+                                            break
+                                    except ValueError as ve:
+                                        print(f'{ve} Invalid number')
+                                        print()    
+                            
+                            elif choice_2 == 3:
+                                print('1. Kilograms to tons')
+                                print('2. Kilograms to pounds')
+                                print('3. Grams to ounces')
+                                print('4. Grams to pounds')
+                                print('5. Milligrams to ounces')
+                                print('0. Go back')
+                                choice_3 = int(input('Choose a conversion: '))
+                                print()
+                                while choice_3 != 0:
+                                    try:
+                                        if choice_3  == 1:
+                                            print('Kilograms to tons')
+                                            print('Enter 0 to back up')
+                                            Kilograms = float(input('Enter amount of Kilograms: '))
+                                            tons = kilogram_to_tons(Kilograms)
+                                            print(f'Your amount in tons is {tons:.2f}')
+                                            print()
+                                            if kilograms == 0:
+                                                break
+                                        elif choice_3 == 2:
+                                            print('Kilograms to pounds')
+                                            print('Enter 0 to back up')
+                                            Kilograms = float(input('Enter amount of Kilograms: '))
+                                            pounds = kilogram_to_pounds(Kilograms)
+                                            print(f'Your amount in pounds is {pounds:.2f}')
+                                            print()
+                                            if kilograms == 0:
+                                                break
+                                        elif choice_3 == 3:
+                                            print('Grams to ounces')
+                                            print('Enter 0 to back up')
+                                            Grams = float(input('Enter amount of Grams: '))
+                                            ounces = grams_to_ounces(Grams)
+                                            print(f'Your amount in ounces is {ounces:.2f}')
+                                            print()
+                                            if Grams == 0:
+                                                break
+                                        elif choice_3 == 4:
+                                            print('Grams to pounds')
+                                            print('Enter 0 to back up')
+                                            Grams = float(input('Enter amount of Grams: '))
+                                            pounds = grams_to_pounds(Grams)
+                                            print(f'Your amount in pounds is {pounds:.2f}')
+                                            print()
+                                            if Grams == 0:
+                                                break
+                                        elif choice_3 == 5:
+                                            print('Milligrams to ounces')
+                                            print('Enter 0 to back up')
+                                            Milligrams = float(input('Enter amount of Milligrams: '))
+                                            ounces = milligrams_to_ounces(Milligrams)
+                                            print(f'Your amount in ounces is {ounces:.2f}')
+                                            print()
+                                            if Milligrams == 0:
+                                                break
+                                        else:
+                                            print('Value out of bounds')
+                                            print()
+                                            break
+                                    except ValueError as ve:
+                                        print(f'{ve} Invalid number')
+                                        print()    
+                            elif choice_2 == 4:
+                                while celsius != 200:
+                                    try:
+                                        print("Celsius to Fahrenheit ")
+                                        print('Enter 200 to go back')
+                                        celsius = float(input('Enter temperature in Celsius: '))
+                                        fahrenheit  = celsius_to_fahrenheit(celsius)
+                                        print(f'Your temperature in Fahrenheit  is: {fahrenheit :.0f}')
+                                        print() 
+                                    except ValueError as ve:
+                                        print(f'{ve} Invalid number')
+                                        print() 
+                                    
+                            
+                                            
+                        if choice_1 == 2:
+                            print('1. Converting Liquid')
+                            print('2. Converting Measurements ')
+                            print('3. Converting Weight')
+                            print('4. Converting Temperature')
+                            print('0. Go back')
+                            choice_2 = int(input('Choose a conversion: '))
+                            print()
+                    
+                            if choice_2 == 1:
+                                print('1. Ounces to milliliters')
+                                print('2. Cups to milliliters')
+                                print('3. Quarts to liters')
+                                print('4. Gallons to liters')
+                                print('0. Go back')
+                                choice_3 = int(input('Choose a conversion: '))
+                                print()
+                                while choice_3 !=0:
+                                    try:
+                                        if choice_3 == 1:
+                                            print('Ounces to milliliters')
+                                            print('Enter 0 to back up')
+                                            Ounces = float(input('Enter amount Ounces: '))
+                                            milliliters = ounces_to_milliliters(Ounces)
+                                            print(f'Your amount in milliliters is {milliliters:.2f}')
+                                            print()
+                                            if Ounces == 0:
+                                                break
+                                        elif choice_3 == 2:
+                                            print('Cups to milliliters')
+                                            print('Enter 0 to back up')
+                                            Cups = float(input('Enter amount Cups: '))
+                                            milliliters = cups_to_milliliters(Cups)
+                                            print(f'Your amount in milliliters is {milliliters:.2f}')
+                                            print()
+                                            if Cups == 0:
+                                                break
+                                        elif choice_3 == 3:
+                                            print('Quarts to liters')
+                                            print('Enter 0 to back up')
+                                            Quarts = float(input('Enter amount of Quarts: '))
+                                            liters = quarts_to_liters(Quarts)
+                                            print(f'Your amount in liters is {liters:.2f}')
+                                            print()
+                                            if Quarts == 0:
+                                                break
+                                        elif choice_3 == 4:
+                                            print('Gallons to liters')
+                                            print('Enter 0 to back up')
+                                            Gallons = float(input('Enter amount Gallons: '))
+                                            liters = gallons_to_liters(Gallons)
+                                            print(f'Your amount in liters is {liters:.2f}')
+                                            print()
+                                            if Gallons == 0:
+                                                break
+                                        else:
+                                            print('Value out of bounds')
+                                            print()
+                                            break
+                                    except ValueError as ve:
+                                        print(f'{ve} Invalid number')
+                                        print()
+        
+                            elif choice_2 == 2:
+                                print('1. Inches to meters')
+                                print('2. Inches to centimeters')
+                                print('3. Inches to millimeters')
+                                print('4. Feet to meters')
+                                print('5. Yards to meters')
+                                print('6. Yards to kilometers')
+                                print('7. Miles to kilometers')
+                                print('0. Go back')
+                                choice_3 = int(input('Choose a conversion: '))
+                                print()
+                                while choice_3 !=0:
+                                    try:
+                                        if choice_3 == 1:
+                                            print('Inches to meters')
+                                            print('Enter 0 to back up')
+                                            Inches = float(input('Enter amount Inches: '))
+                                            meters = inches_to_meters(Inches)
+                                            print(f'Your amount in meters is {meters:.2f}')
+                                            print()
+                                            if Inches == 0:
+                                                break
+                                        elif choice_3 == 2:
+                                            print('Inches to centimeters')
+                                            print('Enter 0 to back up')
+                                            Inches = float(input('Enter amount Inches: '))
+                                            centimeters = inches_to_centimeters(Inches)
+                                            print(f'Your amount in centimeters is {centimeters:.2f}')
+                                            print()
+                                            if Inches == 0:
+                                                break
+                                        elif choice_3 == 3:
+                                            print('Inches to millimeters')
+                                            print('Enter 0 to back up')
+                                            Inches = float(input('Enter amount of Inches: '))
+                                            millimeters = inches_to_millimeters(Inches)
+                                            print(f'Your amount in millimeters is {millimeters:.2f}')
+                                            print()
+                                            if Inches == 0:
+                                                break
+                                        elif choice_3 == 4:
+                                            print('Feet to meters')
+                                            print('Enter 0 to back up')
+                                            Feet = float(input('Enter amount Feet: '))
+                                            meters = feet_to_meters(Feet)
+                                            print(f'Your amount in meters is {meters:.2f}')
+                                            print()
+                                            if Feet == 0:
+                                                break
+                                        elif choice_3 == 5:
+                                            print('Yards to meters')
+                                            print('Enter 0 to back up')
+                                            Yards = float(input('Enter amount Yards: '))
+                                            meters = yards_to_meters(Yards)
+                                            print(f'Your amount in meters is {meters:.2f}')
+                                            print()
+                                            if Yards == 0:
+                                                break
+                                        elif choice_3 == 6:
+                                            print('Yards to kilometers')
+                                            print('Enter 0 to back up')
+                                            Yards = float(input('Enter amount of Yards: '))
+                                            kilometers = yards_to_kilometers(Yards)
+                                            print(f'Your amount in kilometers is {kilometers:.2f}')
+                                            print()
+                                            if Yards == 0:
+                                                break
+                                        elif choice_3 == 7:
+                                            print('Miles to kilometers')
+                                            print('Enter 0 to back up')
+                                            Miles = float(input('Enter amount Miles: '))
+                                            kilometers = miles_to_kilometers(Miles)
+                                            print(f'Your amount in kilometers is {kilometers:.2f}')
+                                            print()
+                                            if Miles == 0:
+                                                break
+                                        else:
+                                            print('Value out of bounds')
+                                            print()
+                                            break
+                                    except ValueError as ve:
+                                        print(f'{ve} Invalid number')
+                                        print()    
+        
+        
+                            elif choice_2 == 3:
+                                print('1. Ounces to milligrams')
+                                print('2. Ounces to grams')
+                                print('3. Pounds to kilograms')
+                                print('4. Tons to kilograms')
+                                print('0. Go back')
+                                choice_3 = int(input('Choose a conversion: '))
+                                print()
+                                while choice_3 !=0:
+                                    try:
+                                        if choice_3 == 1:
+                                            print('Ounces to milligrams')
+                                            print('Enter 0 to back up')
+                                            Ounces = float(input('Enter amount Ounces: '))
+                                            milligrams = ounces_to_milligrams(Ounces)
+                                            print(f'Your amount in milligrams is {milligrams:.2f}')
+                                            print()
+                                            if Ounces == 0:
+                                                break
+                                        elif choice_3 == 2:
+                                            print('Ounces to grams')
+                                            print('Enter 0 to back up')
+                                            Ounces = float(input('Enter amount Ounces: '))
+                                            grams = ounces_to_grams(Ounces)
+                                            print(f'Your amount in grams is {grams:.2f}')
+                                            print()
+                                            if Ounces == 0:
+                                                break
+                                        elif choice_3 == 3:
+                                            print('Pounds to kilograms')
+                                            print('Enter 0 to back up')
+                                            Pounds = float(input('Enter amount of Pounds: '))
+                                            kilograms = pounds_to_kilogram(Pounds)
+                                            print(f'Your amount in kilograms is {kilograms:.2f}')
+                                            print()
+                                            if Pounds == 0:
+                                                break
+                                        elif choice_3 == 4:
+                                            print('Tons to kilograms')
+                                            print('Enter 0 to back up')
+                                            Tons = float(input('Enter amount Tons: '))
+                                            kilograms = tons_to_kilograms(Tons)
+                                            print(f'Your amount in kilograms is {kilograms:.2f}')
+                                            print()
+                                            if Tons == 0:
+                                                break
+                                        else:
+                                            print('Value out of bounds')
+                                            print()
+                                            break
+                                    except ValueError as ve:
+                                        print(f'{ve} Invalid number')
+                                        print()
+        
+                            elif choice_2 == 4:
+                                while fahrenheit   != 200:
+                                    try:
+                                        print('Fahrenheit  to celsius')
+                                        print('Enter 200 to back up')
+                                        fahrenheit  = float(input('Enter temperature in Fahrenheit : '))
+                                        celsius = fahrenheit _to_celsius(fahrenheit )
+                                        print(f'Your temperature in celsius is {celsius:.2f}')
+                                        print()
+                                    except ValueError as ve:
+                                        print(f'{ve} Invalid number')
+                                        print()    
+                        elif choice_1 == 0:
+                            break
+                        elif choice_1 != 1 or choice_1 != 2:
+                            break
+                    except ValueError as ve:
+                            print(f'{ve} Invalid number')
+                            print()    
+                        
+            print('Have a nice day!')
+            print()            
+            
+        
+        
+        
+        
+        # metric to imperial functions
+        def kilometers_to_miles(kilometers):
+            miles = kilometers * 0.62
+            return miles
+        
+        def kilometers_to_feet(kilometers):
+            feet = kilometers * 3280.8
+            return feet
+        
+        def meters_to_feet(meters):
+            feet = meters * 3.28
+            return feet
+        
+        def centimeters_to_inches(centimeters):
+            inches =centimeters * 0.39
+            return inches 
+        
+        def millimeters_to_inches(millimeters):
+            inches = millimeters * 0.039
+            return inches 
+        
+        def liters_to_quarts(liters):
+            quarts = liters * 1.057
+            return quarts
+        
+        def liters_to_gallons(liters):
+            gallons = liters * 0.264
+            return gallons
+        
+        def milliliters_to_cups(milliliters):
+            cups = milliliters * 0.0042
+            return cups
+        
+        def milliliters_to_ounces(milliliters):
+            ounces = milliliters * 0.0338
+            return ounces
+        
+        def celsius_to_fahrenheit(celsius):
+            fahrenheit = celsius * (9/5) + 32
+            math.ceil(fahrenheit)
+            return fahrenheit
+        
+        def kilogram_to_tons(kilograms):
+            tons = kilograms * 0.0011
+            return tons
+        
+        def kilogram_to_pounds(kilograms):
+            pounds = kilograms * 2.2046
+            return pounds
+        
+        def grams_to_ounces(grams):
+            ounces = grams * 0.035
+            return ounces
+        
+        def grams_to_pounds(grams):
+            pounds = grams * 0.002205
+            return pounds
+        
+        def milligrams_to_ounces(milligrams):
+            ounces = milligrams * 0.000035
+            return ounces
+        #imperial to metric functions
+        
+        def fahrenheit _to_celsius(fahrenheit ):
+            celsius = (fahrenheit  - 32) * (5/9)
+            # math.ceil(celsius)
+            return celsius
+        
+        def inches_to_meters(inches):
+            meters = inches * 0.0254
+            return meters
+        
+        def inches_to_centimeters(inches):
+            centimeters = inches * 2.54
+            return centimeters
+        
+        def inches_to_millimeters(inches):
+            millimeters = inches * 25.40
+            return millimeters
+        
+        def feet_to_meters(feet):
+            meters = feet * 0.30
+            return meters
+        
+        def yards_to_meters(yards):
+            meters = yards * 0.91
+            return meters
+        
+        def yards_to_kilometers(yards):
+            kilometers = yards * 0.00091
+            return kilometers
+        
+        def miles_to_kilometers(miles):
+            kilometers = miles * 1.61
+            return kilometers
+        def ounces_to_milliliters(ounces):
+            milliliters = ounces * 29.57
+            return milliliters
+        
+        def cups_to_milliliters(cups):
+            milliliters = cups * 236.6
+            return milliliters
+        
+        def quarts_to_liters(quarts):
+            liters = quarts * 0.95
+            return liters
+        
+        def gallons_to_liters(gallons):
+            liters = gallons * 3.785
+            return liters
+        
+        def ounces_to_milligrams(ounces):
+            milligrams = ounces * 28350
+            return milligrams
+        
+        def ounces_to_grams(ounces):
+            grams = ounces * 28.35
+            return grams
+        
+        def pounds_to_kilogram(pounds):
+            kilograms = pounds * 0.454
+            return kilograms
+        
+        def tons_to_kilograms(tons):
+            kilograms = tons * 907.18
+            return kilograms
+        
+        
+        
+        
+        if __name__ == "__main__":
+            main()    </p>
+</body>
+</html>
