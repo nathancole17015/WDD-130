@@ -27,6 +27,7 @@ h3{
     text-align: center; 
     font-family: 'Noto Sans';
     grid-column: 4/8;
+    margin-top: 50px;
 }
 
 body{
@@ -38,7 +39,7 @@ body{
 
 }
 .cup, .stick, .scale{
-    margin: 200px 0;
+    margin: 20px 0;
     border: 10px solid #BA181B;
     transition: transform .5s;
 
