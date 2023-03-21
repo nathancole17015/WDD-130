@@ -139,8 +139,10 @@ body ::-webkit-scrollbar{
         display: block;
         padding: 15px;
     }
-    
-    body{
+    h3{
+        font-size: 20px;
+    }
+    #conversion{
         font-size: 12px;
     }
     
