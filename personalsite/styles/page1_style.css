@@ -4,8 +4,7 @@
     display: grid;
     max-width: 1600px;
     margin: 0 auto;
-    grid-template-columns: repeat(10,1fr)
-    
+    grid-template-columns: repeat(10,1fr);
 }
 
 
@@ -119,12 +118,20 @@ nav{
 .logo{
     width: 100px;
 }
+body ::-webkit-scrollbar{
+ color: red;
+}
 
 #conversion{
+    overflow: scroll;
     color:#BA181B;
     font-display: block;
-    grid-column: 1/8;
+    height: 500px;
+    grid-column: 1/9;
     margin:30px;
+    scrollbar-color: red;
+
+   
 }
 
 @media screen and (max-width: 900px) {
