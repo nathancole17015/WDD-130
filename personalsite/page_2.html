@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src = './scripts/task6.js'></script>
+    <link rel="stylesheet" href="./styles/page2_style.css">
     <title>Page 2</title>
+
 </head>
 
 <body>
@@ -22,16 +24,19 @@
             </nav>
 
         </header>
-        <h3> I created a website that displays the biography of a Pokémon. It retrieves data from another website on a chosen Pokémon. There’s a search option where you will type a Pokémon name then the program returns information. The information returned in the moves set, strengths and weaknesses, what type of Pokémon it is.</h3>
-        <img src="./images/pokemon-logo.png" alt="Pokemon Logo">
-        <img src="./images/pokedex.png" alt="Pokedex">
+        <img id = 'pokemon' src="./images/pokemon-logo.png" alt="Pokemon Logo">
+        <h3 id = 'description' > I created a website that displays the biography of a Pokémon. It retrieves data from another website on a chosen Pokémon. There’s a search option where you will type a Pokémon's name then the program returns information. The information returned is the moves set, strengths and weaknesses, what type of Pokémon it is.</h3>
+
         <h1>Pokemon Biography</h1>
-        <input type="text" id = 'pokemonKind' name = 'pokemonKind'>
-        <button id ='PokemonChoice' type="button">Pokemon</button>
-        <div id = 'output'></div>
+        <div id = pokemonInput >
+            <img id = 'pokedex' src="./images/pokedex.png" alt="Pokedex">
+            <input type="text" id = 'pokemonKind' name = 'pokemonKind'>
+            <button id ='PokemonChoice' type="button">Pokemon</button>
+        </div>
+            <div id = 'output'></div>
         
         <footer>
-            <p>Nathan Cole's portfolio &copy; natemcole98@gmail.com 2023 </p>
+            <p id = 'email' >Nathan Cole's portfolio &copy; natemcole98@gmail.com 2023 </p>
             <p><a href="./site-plan.html">Site Plan</a></p>
             <p><a href="contactus.html">Contact Me</a></p>
             <div class="social">

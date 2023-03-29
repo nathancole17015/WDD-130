@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Oswald:wght@500&display=swap');
+
+#content {
+    display: grid;
+    max-width: 1600px;
+    margin: 0 auto;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    color: #BA181B;
+    padding: 35px;
+
+}
+
+#pokemon {
+    grid-row: 2/5;
+    grid-column: 4/6;
+    margin: 10px;
+}
+
+#pokemonInput {
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+
+#output {
+    grid-row: 6/7;
+    display: inline;
+    grid-column: 5/6;
+}
+
+#output article{
+    display: inline;
+    color:#BA181B;
+
+}
+
+h1{
+    color: #0B090A;
+}
+#description {
+    color: #BA181B;
+    text-align: center;
+    font-family: 'Oswald';
+    grid-column: 3/8;
+    grid-row: 3/4;
+    margin-top: 20px;
+
+}
+
+h3 {
+    color: #BA181B;
+    font-family: 'Oswald';
+    grid-row: 2/4;
+
+}
+
+h2 {
+    color: #BA181B;
+    font-family: 'Oswald';
+    grid-row: 2/4;
+
+}
+
+
+
+p {
+    color: #BA181B;
+    font-family: 'Noto Sans';
+    grid-column: 1/2;
+    grid-row: 2/4;
+
+}
+
+body {
+    background-color: #0B090A;
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald';
+
+}
+
+
+
+header {
+    background-color: #F5F3F4;
+    font-family: 'Oswald';
+    grid-column: 1/12;
+}
+
+nav a:hover {
+    background-color: #BA181B;
+    color: #F5F3F4;
+}
+
+
+footer {
+    background-color: #BA181B;
+    color: #0B090A;
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-row: 7;
+    grid-column: 1/12;
+}
+
+footer a {
+    background-color: #BA181B;
+    text-decoration: none;
+    color: #0B090A;
+
+}
+
+footer a:hover {
+    background-color: #0B090A;
+    color: white;
+
+}
+
+footer p {
+    font-size: 1.2em;
+    font-family: 'Noto Sans';
+
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+footer .social img {
+    padding-top: 15px;
+    width: 50%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+#logo_link {
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+#email {
+    color: #0B090A
+}
+
+@media screen and (max-width: 900px) {
+
+    nav,
+    footer {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    #conversion {
+        font-size: 12px;
+    }
+
+    footer {
+        margin-top: 25px;
+        grid-row: 7;
+        grid-column: 1/12;
+        max-width: 100%;
+    }
+
+#description {
+    color: #BA181B;
+    text-align: center;
+    font-family: 'Oswald';
+    grid-column: 2/8;
+    grid-row: 3/4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+#pokemon {
+    grid-row: 2/5;
+    grid-column: 2/4;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+#output {
+    grid-row: 6/7;
+    display: inline;
+    grid-column: 5/6;
+}
+#pokemonInput {
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+}
