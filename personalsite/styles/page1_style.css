@@ -115,17 +115,16 @@ nav{
     width: 100px;
 }
 body ::-webkit-scrollbar{
- color: red;
+ color: black;
 }
 
 #conversion{
     overflow: scroll;
     color:#BA181B;
-    font-display: block;
     height: 500px;
     grid-column: 1/9;
     margin:30px;
-    scrollbar-color: red;
+    
 
    
 }
